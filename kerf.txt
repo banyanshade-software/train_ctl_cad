@@ -1,0 +1,14 @@
+
+carton
+------
+
+https://www.sculpteo.com/fr/decoupe-laser/materiaux-decoupe-gravure-laser/carton/
+
+0,075 mm	
+
+MDF
+---
+https://www.sculpteo.com/fr/decoupe-laser/materiaux-decoupe-gravure-laser/mdf-materiau/
+Epaisseur (mm)	                 2	3	6	8	10
+Taille de l’entaille (mm)	0,2	0,08	0,145	0,19	0,205
+
