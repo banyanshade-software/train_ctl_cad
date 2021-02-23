@@ -30,9 +30,14 @@ def translation_x_y(dwg, x, y):
     """Given a dwg object, translate x and y coordinates of everything"""
     x = float(x)
     y = float(y)
+    #Matrix44 translate(dx: float, dy: float, dz: float) → Matrix44
+    m44 = ezdxf.math.Matrix44.translate(x,y,0)
+    print("m44=", m44)
     #: :type dwg: ezdxf.drawing.Drawing
     for entity in dwg.entities:
-        print("Entity of type: " + str(entity.dxftype()))
+        entity.transform(m44)
+        '''
+        #print("Entity of type: " + str(entity.dxftype()))
         if "LINE" == entity.dxftype():
             # This is madness for accesing!
             sx, sy, sz = entity.get_dxf_attrib('start') # I found it in the docs, I actually couldnt find it in attribs
@@ -65,8 +70,12 @@ def translation_x_y(dwg, x, y):
             lx, ly, lz = entity.get_dxf_attrib('location') # I found it in the docs, I actually couldnt find it in attribs
             entity.set_dxf_attrib('location', (lx + x, ly + y, lz))
             
+        elif "POLYLINE" == entity.dxftype():
+            print("WARNING polyline not tested yet")
+            entity.transform(m44)
         else:
             print( "ERROR: I don't know this entity type... " + str(entity.dxftype()))
+        '''
 
 # https://stackoverflow.com/questions/57389079/move-dimension-line-to-new-layer-using-ezdxf
 def rename_layer(doc, old, new):
