@@ -1,0 +1,10 @@
+{
+	"autodeskProduct":	"Fusion360",
+	"type":	"script",
+	"author":	"D.BRAUN",
+	"description":	{
+		"":	"creates hole / dove tail for Z scale trackbed"
+	},
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
