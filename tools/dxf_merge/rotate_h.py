@@ -98,7 +98,7 @@ def optimum_rotate(filename, seplayer=False):
             hmin = h
             bestang= ang
             bestdxf = rdxf
-            print("  angle=",ang, " h=", h)
+            #print("  angle=",ang, " h=", h)
             #print("      s   : ", s)
             #print("      s0  : ", bbox.extends(org_dxf.modelspace()).size)
            
